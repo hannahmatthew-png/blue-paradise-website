@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://www.blueparadiseenterprises.com/sitemap.xml
+Sitemap: https://www.blueparadiseenterprises.in/sitemap.xml
