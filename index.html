@@ -544,9 +544,29 @@ footer.site-footer a:hover{color:#fff;}
       </div>
     </div>
   </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();
-  var t=document.getElementById('nav-toggle'),n=document.getElementById('main-nav');
-  if(t){t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o);});}
-  </script>
+  <script>
+document.getElementById('y').textContent = new Date().getFullYear();
+
+var t = document.getElementById('nav-toggle');
+var n = document.getElementById('main-nav');
+
+if (t) {
+  t.addEventListener('click', function () {
+    var o = n.classList.toggle('open');
+    t.setAttribute('aria-expanded', o);
+  });
+}
+
+if (n) {
+  var navLinks = n.querySelectorAll('a');
+
+  navLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+      n.classList.remove('open');
+      t.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+</script>
 </body>
 </html>
